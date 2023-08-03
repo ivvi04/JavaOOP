@@ -14,37 +14,52 @@ public class Main {
         accountCredit.replenish(200.0);
         accountDeposit.replenish(300.0);
 
+        System.out.println("Баланс обычного счета: " + account.getCurrentBalance());
+        System.out.println("Баланс кредитного счета: " + accountCredit.getCurrentBalance());
+        System.out.println("Баланс депозитного счета: " + accountDeposit.getCurrentBalance());
+
+        System.out.println("Пополнение обычного счета на сумму -10.0");
+
         try {
             account.replenish(-10.0);
         } catch (Error e) {
-            System.out.println(e.getMessage());
+            System.out.println("Баланс обычного счета: " + e.getMessage());
         }
+
+        System.out.println("Снятие с кредитного счета суммы 200.0");
 
         try {
             accountCredit.withdraw(200.0);
         } catch (Error e) {
-            System.out.println(e.getMessage());
+            System.out.println("Баланс кредитного счета: " + e.getMessage());
         }
+
+        System.out.println("Снятие с кредитного счета суммы 100.0");
 
         try {
             accountCredit.withdraw(100.0);
-            System.out.println(accountCredit.getCurrentBalance());
+            System.out.println("Баланс кредитного счета: " + accountCredit.getCurrentBalance());
         } catch (Error e) {
-            System.out.println(e.getMessage());
+            System.out.println("Баланс кредитного счета: " + e.getMessage());
         }
+
+        System.out.println("Снятие с депозитного счета суммы 100.0");
+
+        try {
+            accountDeposit.withdraw(100.0);
+            System.out.println("Баланс депозитного счета: " + accountDeposit.getCurrentBalance());
+        } catch (Error e) {
+            System.out.println("Баланс депозитного счета: " + e.getMessage());
+        }
+
+        System.out.println("Снятие с депозитного счета суммы 100.0");
 
         try {
             accountDeposit.withdraw(100.0);
             System.out.println(accountDeposit.getCurrentBalance());
+            System.out.println("Баланс депозитного счета: " + accountDeposit.getCurrentBalance());
         } catch (Error e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            accountDeposit.withdraw(100.0);
-            System.out.println(accountDeposit.getCurrentBalance());
-        } catch (Error e) {
-            System.out.println(e.getMessage());
+            System.out.println("Баланс депозитного счета: " + e.getMessage());
         }
     }
 }

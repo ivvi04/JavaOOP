@@ -10,9 +10,9 @@ public abstract class AccountAbstract implements AccountInterface {
         this.balance = balance;
     }
 
-    public abstract void replenish(Double amount);
+    public abstract void replenish(Double amount) throws Exception;
 
-    public abstract void withdraw(Double amount);
+    public abstract void withdraw(Double amount) throws Exception;
 
     public Double getCurrentBalance() {
         return this.balance;

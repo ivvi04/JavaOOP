@@ -7,17 +7,13 @@ public class AccountFixed extends AccountAbstract {
     }
 
     @Override
-    public void replenish(Double amount) {
-        throw new Error("Пополнение баланса запрещено");
+    public void replenish(Double amount) throws Exception {
+        throw new Exception("Пополнение баланса запрещено");
     }
 
     @Override
-    public void withdraw(Double amount) {
-        throw new Error("Снятие средств запрещено");
+    public void withdraw(Double amount) throws Exception {
+        throw new Exception("Снятие средств запрещено");
     }
 
-    @Override
-    public Double getCurrentBalance() {
-        return this.balance;
-    }
 }

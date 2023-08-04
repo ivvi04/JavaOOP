@@ -2,7 +2,7 @@ package Lesson2.account.classes;
 
 public class AccountCredit extends Account {
 
-    private Double percent;
+    private final Double percent;
 
     public AccountCredit(Double balance, Double percent) {
         super(balance);
@@ -10,7 +10,7 @@ public class AccountCredit extends Account {
     }
 
     @Override
-    public void withdraw(Double amount) {
+    public void withdraw(Double amount) throws Exception {
         super.withdraw(this.calcWithPercent(amount));
     }
 

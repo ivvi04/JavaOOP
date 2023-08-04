@@ -13,14 +13,14 @@ public class AccountDeposit extends Account {
     }
 
     @Override
-    public void withdraw(Double amount) {
+    public void withdraw(Double amount) throws Exception {
         long days = ChronoUnit.DAYS.between(this.lastWithdrawal, LocalDateTime.now());
         if (this.lastWithdrawal == null || days >= 1) {
             super.withdraw(amount);
             this.lastWithdrawal = LocalDateTime.now();
         } else {
             if(days == 0) {
-                throw new Error("Снятие средств разрешено не ранее " +
+                throw new Exception("Снятие средств разрешено не ранее " +
                         lastWithdrawal.plusDays(1).format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")));
             }
         }

@@ -8,7 +8,6 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         //Box<String> stringBox = new Box<>(); // недопустимо
-        Box<Fruit> fruitBox = new Box<>();
         Box<Orange> orangeBox = new Box<>();
         Box<Orange> anotherOrangeBox = new Box();
         Box<Apple> appleBox = new Box<>();
@@ -36,8 +35,10 @@ public class Main {
         System.out.println("goldenAppleBox = " + goldenAppleBox.getWeight()); // 0
         System.out.println("appleBox = " + appleBox.getWeight()); // 3
 
+        Box<Fruit> fruitBox = new Box<>();
         appleBox.moveTo(fruitBox);
         //fruitBox.moveTo(goldenAppleBox); // недопустимо
+        System.out.println("appleBox = " + appleBox.getWeight()); // 0
         System.out.println("fruitBox = " + fruitBox.getWeight()); // 3
     }
 }

@@ -5,7 +5,6 @@ import java.util.List;
 public class Homework {
 
     public int sum(List<Integer> items) {
-        // FIXME Реализовать
         int sum = 0;
         for(Integer i : items){
             sum += i;

@@ -2,7 +2,7 @@
 
 ## Урок 1. Принципы ООП: Инкапсуляция, наследование, полиморфизм
 
-**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/Lesson1)**
+**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/main/java/ru/lakeevda/lesson1)**
 
 Нужно создать 3 типа счетов в банке.
 У всех этих типов должно быть 2 операции: вывести средства со счета и пополнить счет
@@ -13,7 +13,7 @@
 
 ## Урок 2. Принципы ООП Абстракция и интерфейсы. Пример проектирования
 
-**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/Lesson2)**
+**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/main/java/ru/lakeevda/lesson2)**
 
 1. Создать интерфейс.
 2. Создать абстрактный класс, описывающий часть базовой общей логики.
@@ -22,7 +22,7 @@
 
 ## Урок 3. Некоторые стандартные интерфейсы Java и примеры их использования
 
-**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/Lesson3)**
+**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/main/java/ru/lakeevda/lesson3)**
 
 Создать класс Employee c полями:
 1. Имя
@@ -47,7 +47,7 @@
 
 ## Урок 4. ООП: Обобщения. ч1
 
-**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/Lesson4)**
+**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/main/java/ru/lakeevda/lesson4)**
 
 Реализовать класс Box c возможностями:
 1. Класс должен быть параметризуемым любым фруктом. То есть Box<String> - запрещено.

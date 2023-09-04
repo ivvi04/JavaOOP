@@ -101,3 +101,37 @@
     <code>public <T> void copy(List<? extends T> source, List<? super T> target) {
        // FIXME Реализовать
     }</code>
+
+## Урок 6. ООП Дизайн и Solid
+
+**[Задание](https://github.com/ivvi04/JavaOOP/tree/master/src/main/java/ru/lakeevda/lesson6)**
+
+Класс документ - описывает структуру документа.
+
+Нужно спроектировать подсистему отчетов, которая будет формировать отчеты для документа.
+
+1. Формирование PDF-файла (потенциально может быть несколько типов разметки PDF-файла).
+2. Формирование JSON-файла с полями документа
+3. Формирование XML-файла с полями документа
+4. ... потенциально типы отчетов могут добавляться
+
+После реализации задать себе 2 вопроса:
+1. Насколько сложно добавить поддержку нового типа отчета?
+2. Как будет выглядеть проект, если в нем будет 1000+ типов отчетов?
+
+<code>public class ReportEntrypoint {
+  /* Принимает документ и тип отчета. Создает этот отчет и возвращает объект. */
+  public Report create(Document document, String reportType) {
+    throw new UnsupportedOperationException("Not implemented yet");
+  }
+}</code>
+
+<code>static class Document {
+  private UUID id;
+  private String number;
+  // ...
+}</code>
+
+<code>static class Report {
+  private byte[] data;
+}</code>
